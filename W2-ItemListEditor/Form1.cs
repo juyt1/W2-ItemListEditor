@@ -400,7 +400,7 @@ namespace ItemListEditor {
 						{
 							byte[] temp = File.ReadAllBytes(this.FilePath);
 
-							if (temp.Length != 988004)
+							if (temp.Length != 1014004)
 							{
 								MessageBox.Show("Itemlist inválida", "ItemList.bin inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
 								this.LoadItemList();

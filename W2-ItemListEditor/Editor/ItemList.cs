@@ -68,6 +68,8 @@ namespace ItemListEditor {
 		public int UNK_2;
 		public short MountType;
 		public short MountData;
+		public short UNK3;
+		public short UNK4;
 		public st_ItemListItem New()
 		{
 
