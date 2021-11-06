@@ -141,6 +141,7 @@
             this.gerarItemNamecsvToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvarItemNamebinToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarItemNamecsvToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label29 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EFV12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EFV11)).BeginInit();
@@ -1118,6 +1119,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Controls.Add(this.posicao);
             this.groupBox3.Controls.Add(this.slot17);
             this.groupBox3.Controls.Add(this.slot16);
@@ -1535,6 +1537,16 @@
             this.gerarItemNamecsvToolStripMenuItem1.Text = "Gerar ItemName.csv";
             this.gerarItemNamecsvToolStripMenuItem1.Click += new System.EventHandler(this.gerarItemNamecsvToolStripMenuItem1_Click);
             // 
+            // label29
+            // 
+            this.label29.Location = new System.Drawing.Point(78, 181);
+            this.label29.Margin = new System.Windows.Forms.Padding(1);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(119, 15);
+            this.label29.TabIndex = 37;
+            this.label29.Text = "Feito por SeiTbNao";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // W2_ItemListEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1551,7 +1563,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
@@ -1714,6 +1726,7 @@
         private System.Windows.Forms.ToolStripMenuItem gerarItemNamecsvToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salvarItemNamebinToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem gerarItemNamecsvToolStripMenuItem1;
+        private System.Windows.Forms.Label label29;
     }
 }
 
