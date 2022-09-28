@@ -117,13 +117,17 @@ namespace ItemListEditor {
 
 								for (int j = 0; j < Item.Effect.Length; j++)
 								{
+									if (Item.Effect[j].Index == 0)
+										continue;
+
 									if (Item.Effect[j].Index != 0 && Item.Effect[j].Index > 0 && Item.Effect[j].Index < Combo.Items.Count)
 									{
 										Temp += $",{Combo.Items[Item.Effect[j].Index]},{Item.Effect[j].Value}";
 									}
 								}
 
-								Itens.Add(Temp);
+                                Temp += $",{Item.UnkValuesForMountData[0]}.{Item.UnkValuesForMountData[1]}.{Item.UnkValuesForMountData[2]}.{Item.UnkValuesForMountData[3]}";
+                                Itens.Add(Temp);
 							}
 						}
 
@@ -400,8 +404,8 @@ namespace ItemListEditor {
 						{
 							byte[] temp = File.ReadAllBytes(this.FilePath);
 
-							if (temp.Length != 1014004)
-							{
+							if ((temp.Length != 1066004) && (temp.Length != 1066000))
+                            {
 								MessageBox.Show("Itemlist inválida", "ItemList.bin inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
 								this.LoadItemList();
 							}
@@ -498,10 +502,13 @@ namespace ItemListEditor {
 				label28.Text = "";
 
 
+            this.nunk1.Value = item.UnkValuesForMountData[0];
+            this.nunk2.Value = item.UnkValuesForMountData[1];
+            this.nunk3.Value = item.UnkValuesForMountData[2];
+            this.nunk4.Value = item.UnkValuesForMountData[3];
 
 
-
-			this.EF1.SelectedIndex = item.Effect[0].Index;
+            this.EF1.SelectedIndex = item.Effect[0].Index;
 			this.EF2.SelectedIndex = item.Effect[1].Index;
 			this.EF3.SelectedIndex = item.Effect[2].Index;
 			this.EF4.SelectedIndex = item.Effect[3].Index;
@@ -796,9 +803,13 @@ namespace ItemListEditor {
 			item.MountType = Convert.ToInt16(this.UNK3.Value);
 			item.MountData = Convert.ToInt16(this.UNK4.Value);
 
+			item.UnkValuesForMountData[0] = Convert.ToInt16(this.nunk1.Value);
+            item.UnkValuesForMountData[1] = Convert.ToInt16(this.nunk2.Value);
+            item.UnkValuesForMountData[2] = Convert.ToInt16(this.nunk3.Value);
+            item.UnkValuesForMountData[3] = Convert.ToInt16(this.nunk4.Value);
 
 
-			item.Effect[0].Index = Convert.ToInt16(this.EF1.SelectedIndex);
+            item.Effect[0].Index = Convert.ToInt16(this.EF1.SelectedIndex);
 			item.Effect[1].Index = Convert.ToInt16(this.EF2.SelectedIndex);
 			item.Effect[2].Index = Convert.ToInt16(this.EF3.SelectedIndex);
 			item.Effect[3].Index = Convert.ToInt16(this.EF4.SelectedIndex);
@@ -895,7 +906,12 @@ namespace ItemListEditor {
 				this.EFV11.Value = 0;
 				this.EFV12.Value = 0;
 
-				this.CheckPosition(0);
+				this.nunk1.Value = 0;
+                this.nunk2.Value = 0;
+                this.nunk3.Value = 0;
+                this.nunk4.Value = 0;
+
+                this.CheckPosition(0);
 			}
 		}
 

@@ -70,6 +70,8 @@ namespace ItemListEditor {
 		public short MountData;
 		public short UNK3;
 		public short UNK4;
+		[MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+		public short[] UnkValuesForMountData;
 		public st_ItemListItem New()
 		{
 
@@ -93,8 +95,9 @@ namespace ItemListEditor {
 				Unk = 0,
 				UNK_2 = 0,
 				MountType = 0,
-				MountData = 0
-			};
+				MountData = 0,
+				UnkValuesForMountData = new short[4]
+            };
 
 			for (int i = 0; i < rtn.Effect.Length; i++)
 			{

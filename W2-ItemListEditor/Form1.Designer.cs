@@ -104,6 +104,7 @@
             this.cancel = new System.Windows.Forms.Button();
             this.saveall = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.posicao = new System.Windows.Forms.TextBox();
             this.slot17 = new System.Windows.Forms.CheckBox();
             this.slot16 = new System.Windows.Forms.CheckBox();
@@ -141,7 +142,11 @@
             this.gerarItemNamecsvToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvarItemNamebinToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarItemNamecsvToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label29 = new System.Windows.Forms.Label();
+            this.nunk4 = new System.Windows.Forms.NumericUpDown();
+            this.nunk3 = new System.Windows.Forms.NumericUpDown();
+            this.nunk2 = new System.Windows.Forms.NumericUpDown();
+            this.nunk1 = new System.Windows.Forms.NumericUpDown();
+            this.label30 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EFV12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EFV11)).BeginInit();
@@ -176,6 +181,10 @@
             this.groupBox5.SuspendLayout();
             this.itemBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nunk4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nunk3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nunk2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nunk1)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox
@@ -281,7 +290,7 @@
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(5, 442);
+            this.label9.Location = new System.Drawing.Point(5, 450);
             this.label9.Margin = new System.Windows.Forms.Padding(1);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(210, 15);
@@ -788,6 +797,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.nunk4);
+            this.groupBox2.Controls.Add(this.nunk3);
+            this.groupBox2.Controls.Add(this.nunk2);
+            this.groupBox2.Controls.Add(this.nunk1);
+            this.groupBox2.Controls.Add(this.label30);
             this.groupBox2.Controls.Add(this.label28);
             this.groupBox2.Controls.Add(this.label27);
             this.groupBox2.Controls.Add(this.Visual);
@@ -824,14 +838,14 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(1);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 9);
-            this.groupBox2.Size = new System.Drawing.Size(223, 542);
+            this.groupBox2.Size = new System.Drawing.Size(223, 582);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações Gerais";
             // 
             // label28
             // 
-            this.label28.Location = new System.Drawing.Point(5, 473);
+            this.label28.Location = new System.Drawing.Point(5, 485);
             this.label28.Margin = new System.Windows.Forms.Padding(1);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(210, 15);
@@ -946,7 +960,7 @@
             // anct
             // 
             this.anct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.anct.Location = new System.Drawing.Point(5, 457);
+            this.anct.Location = new System.Drawing.Point(5, 465);
             this.anct.Margin = new System.Windows.Forms.Padding(1);
             this.anct.Maximum = new decimal(new int[] {
             256,
@@ -1142,10 +1156,20 @@
             this.groupBox3.Location = new System.Drawing.Point(463, 380);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(1);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(255, 203);
+            this.groupBox3.Size = new System.Drawing.Size(255, 243);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Local onde será equipado";
+            // 
+            // label29
+            // 
+            this.label29.Location = new System.Drawing.Point(79, 213);
+            this.label29.Margin = new System.Windows.Forms.Padding(1);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(119, 15);
+            this.label29.TabIndex = 37;
+            this.label29.Text = "Feito por SeiTbNao";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // posicao
             // 
@@ -1379,7 +1403,7 @@
             this.groupBox5.Location = new System.Drawing.Point(5, 500);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(1);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(220, 83);
+            this.groupBox5.Size = new System.Drawing.Size(220, 123);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Salvar ItemList";
@@ -1537,22 +1561,78 @@
             this.gerarItemNamecsvToolStripMenuItem1.Text = "Gerar ItemName.csv";
             this.gerarItemNamecsvToolStripMenuItem1.Click += new System.EventHandler(this.gerarItemNamecsvToolStripMenuItem1_Click);
             // 
-            // label29
+            // nunk4
             // 
-            this.label29.Location = new System.Drawing.Point(78, 181);
-            this.label29.Margin = new System.Windows.Forms.Padding(1);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(119, 15);
-            this.label29.TabIndex = 37;
-            this.label29.Text = "Feito por SeiTbNao";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nunk4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nunk4.Location = new System.Drawing.Point(171, 556);
+            this.nunk4.Margin = new System.Windows.Forms.Padding(1);
+            this.nunk4.Maximum = new decimal(new int[] {
+            256,
+            0,
+            0,
+            0});
+            this.nunk4.Name = "nunk4";
+            this.nunk4.Size = new System.Drawing.Size(39, 21);
+            this.nunk4.TabIndex = 39;
+            // 
+            // nunk3
+            // 
+            this.nunk3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nunk3.Location = new System.Drawing.Point(111, 556);
+            this.nunk3.Margin = new System.Windows.Forms.Padding(1);
+            this.nunk3.Maximum = new decimal(new int[] {
+            256,
+            0,
+            0,
+            0});
+            this.nunk3.Name = "nunk3";
+            this.nunk3.Size = new System.Drawing.Size(39, 21);
+            this.nunk3.TabIndex = 38;
+            // 
+            // nunk2
+            // 
+            this.nunk2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nunk2.Location = new System.Drawing.Point(54, 556);
+            this.nunk2.Margin = new System.Windows.Forms.Padding(1);
+            this.nunk2.Maximum = new decimal(new int[] {
+            256,
+            0,
+            0,
+            0});
+            this.nunk2.Name = "nunk2";
+            this.nunk2.Size = new System.Drawing.Size(39, 21);
+            this.nunk2.TabIndex = 37;
+            // 
+            // nunk1
+            // 
+            this.nunk1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nunk1.Location = new System.Drawing.Point(2, 556);
+            this.nunk1.Margin = new System.Windows.Forms.Padding(1);
+            this.nunk1.Maximum = new decimal(new int[] {
+            256,
+            0,
+            0,
+            0});
+            this.nunk1.Name = "nunk1";
+            this.nunk1.Size = new System.Drawing.Size(39, 21);
+            this.nunk1.TabIndex = 35;
+            // 
+            // label30
+            // 
+            this.label30.Location = new System.Drawing.Point(2, 539);
+            this.label30.Margin = new System.Windows.Forms.Padding(1);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(210, 15);
+            this.label30.TabIndex = 36;
+            this.label30.Text = "nUnk1        nUnk2       nUnk3        nUnk4";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // W2_ItemListEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(722, 588);
+            this.ClientSize = new System.Drawing.Size(722, 633);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Pesquisa);
             this.Controls.Add(this.label10);
@@ -1607,6 +1687,10 @@
             this.itemBox.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nunk4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nunk3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nunk2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nunk1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1727,6 +1811,11 @@
         private System.Windows.Forms.ToolStripMenuItem salvarItemNamebinToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem gerarItemNamecsvToolStripMenuItem1;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.NumericUpDown nunk4;
+        private System.Windows.Forms.NumericUpDown nunk3;
+        private System.Windows.Forms.NumericUpDown nunk2;
+        private System.Windows.Forms.NumericUpDown nunk1;
+        private System.Windows.Forms.Label label30;
     }
 }
 
